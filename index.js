@@ -25,7 +25,5 @@ document.getElementById('item8').onclick =function () {
 };
 document.getElementById('item9').onclick =function () {
     document.getElementById('item9').style.backgroundColor = 'green';
-};
-document.getElementById('item10').onclick =function () {
-    document.getElementById('item10').style.backgroundColor = 'green';
+    document.getElementById('container').style.backgroundColor = 'green';
 };
