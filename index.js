@@ -1,23 +1,27 @@
-let color1= 'green';
-let cells =[
+let color1='green';
+let cells=[
     [null, null, null],
     [null, null, null],
     [null, null, null]
 ];
 
 function checkClick (cell, x, y){
-    if (color1 === 'green') {
-        color1='red';
-    } else if (color1 === 'red') {
-        color1 = 'green';
-    }
-    if (
+        if (
         document.getElementById(cell).style.background !== 'green' &&
         document.getElementById(cell).style.background !=='red'
     ) {
         document.getElementById(cell).style.background = color1;
         cells[x][y]=color1;
     }
+
+    //CheckColor
+    if (color1==='green') {
+        color1='red';
+    } else if (color1==='red') {
+        color1='green';
+    }
+
+    //CheckWinner
     if(
         (cells[0][0] != null && cells[0][0] === cells[1][0] && cells[1][0] === cells[2][0]) ||
         (cells[0][1] != null && cells[0][1] === cells[1][1] && cells[2][1] === cells[1][1]) ||
@@ -29,7 +33,6 @@ function checkClick (cell, x, y){
         (cells[0][2] != null && cells[0][2] === cells[1][1] && cells[1][1] === cells[2][0])
     ){
         document.getElementById('container').style.background = color1;
-        alert('Winner '+ color1)
     }
 }
 
