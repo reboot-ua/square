@@ -1,17 +1,16 @@
 let color1= 'green';
-let cells =[[null, null, null],
-            [null, null, null],
-            [null, null, null]];
+let cells =[
+    [null, null, null],
+    [null, null, null],
+    [null, null, null]
+];
 
-function checkColor() {
+function checkClick (cell, x, y){
     if (color1 === 'green') {
         color1='red';
     } else if (color1 === 'red') {
         color1 = 'green';
     }
-}
-
-function checkClick (cell, x, y){
     if (
         document.getElementById(cell).style.background !== 'green' &&
         document.getElementById(cell).style.background !=='red'
@@ -36,45 +35,36 @@ function checkClick (cell, x, y){
 
 document.getElementById('1').onclick = function () {
    checkClick('1', 0, 0);
-        checkColor();
         };
 
 document.getElementById('2').onclick =function () {
     checkClick('2', 1, 0);
-        checkColor();
     };
 
 document.getElementById('3').onclick =function () {
     checkClick('3', 2, 0);
-        checkColor();
     };
 
 document.getElementById('4').onclick =function () {
     checkClick('4', 0, 1);
-        checkColor();
     };
 
 document.getElementById('5').onclick =function () {
     checkClick('5', 1, 1);
-        checkColor();
     };
 
 document.getElementById('6').onclick =function () {
     checkClick('6', 2, 1);
-        checkColor();
     };
 
 document.getElementById('7').onclick =function () {
     checkClick('7', 0, 2);
-        checkColor();
     };
 
 document.getElementById('8').onclick =function () {
     checkClick('8', 1, 2);
-        checkColor();
     };
 
 document.getElementById('9').onclick =function () {
     checkClick('9', 2, 2);
-        checkColor();
     };
