@@ -1,16 +1,10 @@
-body div {
+body{
     padding: 0;
     margin: 0;
 }
 #container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     display: grid;
     grid: repeat(3, 51px) / auto-flow 51px;
-    margin: auto;
 }
 
 #container > div {
@@ -18,4 +12,7 @@ body div {
     border: 1px solid black;
     width: 50px;
     height: 50px;
+}
+#resetGame{
+    margin-top: 15px;
 }
