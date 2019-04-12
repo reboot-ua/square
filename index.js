@@ -1,5 +1,5 @@
 let color1='green';
-const cells=[
+let cells=[
     [null, null, null],
     [null, null, null],
     [null, null, null]
@@ -38,3 +38,15 @@ function checkLine(x1, x2, y1, y2, z1, z2) {
 }
 const element = document.getElementById('container');
 element.addEventListener('click', checkClick);
+function reset () {
+    cells=[
+        [null, null, null],
+        [null, null, null],
+        [null, null, null]
+    ];
+    for(let i = 1; i<10; i++){
+            document.getElementById(i).style.background=''
+    }
+     document.getElementById('container').style.background='';
+}
+document.getElementById('resetGame').addEventListener('click', reset);

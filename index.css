@@ -5,6 +5,7 @@ body{
 #container {
     display: grid;
     grid: repeat(3, 51px) / auto-flow 51px;
+    width: 153px;
 }
 
 #container > div {
