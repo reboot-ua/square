@@ -43,6 +43,7 @@ function checkClick (event){
 }
 
 function computerMove(id) {
+
     id = Math.ceil(Math.random() * cells.length) - 1;
     cells.forEach(function(cell){
         if (cell==null) {
